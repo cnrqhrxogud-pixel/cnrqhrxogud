@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2025년 정화여고 학교폭력 예방 퀴즈^^</title>
+    <title>청구고등학교 학교폭력 예방 퀴즈^^</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
         body { font-family: 'Noto Sans KR', sans-serif; background-color: #f0f2f5; color: #333; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; padding: 20px; box-sizing: border-box; }
@@ -23,7 +23,7 @@
 <body>
 
     <div id="quiz-container">
-        <h1>🏫 2025년 정화여고 학교폭력 예방 퀴즈!!</h1>
+        <h1>🏫 청구고등학교 학교폭력 예방 퀴즈!!</h1>
         <div id="question">질문을 불러오는 중입니다...</div>
         <div class="options-container" id="options-container"></div>
         <div id="hint-container"></div>
@@ -35,7 +35,7 @@
         const quizData = [
             { question: "친구의 신체나 물건에 일부러 해를 가하는 '신체 폭력'에 해당하지 않는 것은 무엇일까요?", options: ["가. 복도에서 장난을 치는 척하며 일부러 발을 걸어 넘어뜨렸다.", "나. 친구의 필통을 빼앗아 창밖으로 던졌다.", "다. 말다툼 끝에 화가 나 친구의 어깨를 세게 밀쳤다.", "라. 친구의 의견에 동의하지 않아 큰 소리로 반박했다."], correctAnswer: "라. 친구의 의견에 동의하지 않아 큰 소리로 반박했다.", hint: "물리적인 힘이나 도구를 사용했는지 생각해 보세요." },
             { question: "SNS나 메신저에서 특정 친구를 지속해서 비방하거나 따돌리는 행위를 무엇이라고 할까요?", options: ["가. 사이버 렉카 (Cyber Wrecker)", "나. 사이버 불링 (Cyberbullying)", "다. 디지털 풋프린트 (Digital Footprint)", "라. 셰어런팅 (Sharenting)"], correctAnswer: "나. 사이버 불링 (Cyberbullying)", hint: "'괴롭힘'을 뜻하는 영어 단어 'Bullying'을 떠올려 보세요." },
-            { question: "학교폭력 피해를 목격했을 때, 방관자의 올바른 행동으로 가장 적절한 것은 무엇일까요?", options: ["가. 못 본 척 그냥 지나간다.", "나. 가해 학생의 행동이 재밌다고 웃으며 동조한다.", "다. 즉시 선생님이나 117 학교폭력 신고센터에 알린다.", "라. 직접 나서서 가해 학생과 싸워 친구를 구해준다."], correctAnswer: "다. 즉시 선생님이나 117 학교폭력 신고센터에 알린다.", hint: "나 자신도 안전하면서 문제를 해결할 가장 효과적인 방법은 무엇일까요?" },
+            { question: "학교폭력 피해를 목격했을 때, 목격자의 올바른 행동으로 가장 적절한 것은 무엇일까요?", options: ["가. 못 본 척 그냥 지나간다.", "나. 가해 학생의 행동이 재밌다고 웃으며 동조한다.", "다. 즉시 선생님이나 117 학교폭력 신고센터에 알린다.", "라. 직접 나서서 가해 학생과 싸워 친구를 구해준다."], correctAnswer: "다. 즉시 선생님이나 117 학교폭력 신고센터에 알린다.", hint: "나 자신도 안전하면서 문제를 해결할 가장 효과적인 방법은 무엇일까요?" },
             { question: "다음 중 학교폭력대책심의위원회(학폭위)의 역할로 옳지 않은 것은 무엇일까요?", options: ["가. 피해 학생 보호를 위한 조치를 결정한다.", "나. 가해 학생에 대한 선도 및 교육 조치를 결정한다.", "다. 가해 학생을 경찰서에 고발하여 형사 처벌을 요청한다.", "라. 학교폭력 사안에 대한 조사 및 사실관계를 확인한다."], correctAnswer: "다. 가해 학생을 경찰서에 고발하여 형사 처벌을 요청한다.", hint: "학폭위는 사법기관이 아닌 '교육적' 해결을 위한 기구라는 점을 생각해 보세요." },
             { question: "친구가 원하지 않음에도 계속 외모를 평가하거나 성적인 농담을 하는 행위는 어떤 유형의 폭력에 해당할까요?", options: ["가. 신체 폭력", "나. 금품 갈취", "다. 언어 폭력 (성희롱 포함)", "라. 강요"], correctAnswer: "다. 언어 폭력 (성희롱 포함)", hint: "상대방에게 불쾌감을 주는 '말'이나 '대화'와 관련된 폭력입니다." },
             { question: "학교폭력으로 인정되기 위한 필수 요건으로 가장 중요한 것은 무엇일까요?", options: ["가. 가해 학생의 나쁜 의도", "나. 피해 학생이 겪는 신체적·정신적 고통", "다. 폭행 장면을 목격한 증인의 존재", "라. 가해 행위로 인해 발생한 금전적 피해"], correctAnswer: "나. 피해 학생이 겪는 신체적·정신적 고통", hint: "'나는 장난이었는데?' 라는 변명이 통하지 않는 이유를 생각해 보세요. 누구의 입장이 가장 중요할까요?" },
